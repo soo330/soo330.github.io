@@ -3,7 +3,6 @@
 // make navbar trasparent when it is on the top
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
-
 document.addEventListener('scroll', () => {
   if (window.scrollY > navbarHeight) {
     navbar.classList.add('navbar--dark');
@@ -25,6 +24,19 @@ navbarMenu.addEventListener('click', (event) => {
   languagesMenu.classList.remove('open');
   scrollIntoView(link);
 });
+
+// handle scrolling when tab & enter key pressed on the navbar menu
+navbarMenu.addEventListener('keydown', (e) => {
+  const target = e.target;
+  const link = target.dataset.link;
+  if (link == null ){
+    return;
+  }
+  navbarMenu.classList.remove('open');
+  languagesMenu.classList.remove('open');
+  scrollIntoView(link);
+});
+
 
 // Navbar toggle button for small screen
 const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
