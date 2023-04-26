@@ -20,39 +20,19 @@
   rel="stylesheet" />
   <!-- css -->
   <link rel="stylesheet" href="style.css" />
+
   <!-- javascript -->
   <script src="main.js" defer></script>
 </head>
 <body>
   <!-- Navbar -->
-  <nav id="navbar">
-    <div class="navbar__logo">
-      <a href="index.html" tabindex="1"></a>
-    </div>
+  <div id="header"></div>
+ 
+  <!-- Toggle Button -->
+  <button class="navbar__toggle-btn">
+    <i class="fa-solid fa-bars"></i>
+  </button>
 
-    <ul class="navbar__menu">
-      <li tabindex="2" class="navbar__menu__item  active" data-link="#home">Home</li>
-      <li tabindex="2" class="navbar__menu__item"  data-link="#about">About</li>
-      <li tabindex="2" class="navbar__menu__item"  data-link="#skills">Skills</li>
-      <li tabindex="2" class="navbar__menu__item"  data-link="#work">My Work</li>
-      <li tabindex="2" class="navbar__menu__item"  data-link="#testimonials">Testimonial</li>
-      <li tabindex="2" class="navbar__menu__item"  data-link="#contact">Contact</li>
-    </ul>
-
-    <ul class="languages">
-      <li class="languages__menu ko">
-        <a href="ko.html" tabindex="1">한국어</a>
-      </li>
-      <li class="languages__menu en">
-        <a href="index.html" tabindex="1">En</a>
-      </li>
-    </ul>
-
-    <!-- Toggle Button -->
-    <button class="navbar__toggle-btn">
-      <i class="fa-solid fa-bars"></i>
-    </button>
-  </nav>
 
   <!-- Home -->
   <section id="home">
@@ -365,23 +345,21 @@
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="section">
-    <h1 class="contact__title">Let's Talk</h2>
-    <h2 class="contact__email">suepark003@gmail.com</h2>
-    <div class="contact__links">
-      <a href="https://github.com/soo330/soo330.github.io" target="_blank">
-        <i class="fab fa-github"></i>
-      </a> 
-    </div>
-    <p class="contact__rights">
-      2022 Soo - All rights reserved.
-    </p>
-  </section>
-
   <!-- Arrow up -->
   <button class="arrow-up">
     <i class="fa-solid fa-arrow-up"></i>
   </button>
+
+    <!-- Contact -->
+    <footer id="contact" class="section">
+    </footer>
+
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script>
+    $(function() {
+      $("#header").load("header.html");
+      $("#contact").load("footer.html");
+    });
+  </script>
 </body>
 </html>

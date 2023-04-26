@@ -114,3 +114,13 @@ function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({behavior: 'smooth'});
 }
+
+function target(){
+  const target = e.target;
+  const link = target.dataset.link;
+  if (link == null ){
+    return;
+  }
+  navbarMenu.classList.remove('open');
+  languagesMenu.classList.remove('open');
+}
