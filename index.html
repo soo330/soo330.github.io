@@ -20,19 +20,14 @@
   rel="stylesheet" />
   <!-- css -->
   <link rel="stylesheet" href="style.css" />
-
+ 
   <!-- javascript -->
   <script src="main.js" defer></script>
 </head>
 <body>
   <!-- Navbar -->
-  <nav id="navbar"></nav>
- 
-  <!-- Toggle Button -->
-  <button class="navbar__toggle-btn">
-    <i class="fa-solid fa-bars"></i>
-  </button>
-
+  <nav id="navbar">
+  </nav>
 
   <!-- Home -->
   <section id="home">
@@ -350,15 +345,15 @@
     <i class="fa-solid fa-arrow-up"></i>
   </button>
 
-    <!-- Contact -->
-    <footer id="contact" class="section">
-    </footer>
+  <!-- Contact -->
+  <footer id="contact" class="section">
+  </footer>
 
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
   <script>
     $(function() {
-      $("#navbar").load("header.html");
-      $("#contact").load("footer.html");
+      $("#navbar").load("../common/header.html");
+      $("#contact").load("../common/footer.html");
     });
   </script>
 </body>
